@@ -24,7 +24,7 @@
 | 16  | Rezistente diverse          | 24  | -  | - |
 
 # 3. Functionalitate Hardware
-  ## 2.1 Componente
+  ## 3.1 Componente
   - **ESP32-C6-WROOM-1-N8** – Microcontroler principal care gestionează comunicațiile (SPI, I2C, UART) și controlează perifericele.  
   - **Conector USB-C & Protecție ESD** – Permite alimentarea prin USB-C și protejează circuitul de descărcările electrostatice.  
   - **Controler de Încărcare MCP73831** – Reglează încărcarea bateriei Li-Po și gestionează curentul de alimentare.  
@@ -37,7 +37,7 @@
   - **Slot SD Card** – Permite stocarea locală a datelor și fișierelor de configurare. 
   - **Supervizor de Tensiune + Butoane Reset/Boot** – Monitorizează alimentarea și asigură resetarea sistemului atunci când este necesar.
 
-  ## 2.2 Specificatii de comunicare
+  ## 3.2 Specificatii de comunicare
   - **I2C** – Utilizat pentru senzorul BME688 și modulul DS3231SN.
   - **SPI** – Folosit pentru NOR Flash, display-ul E-Paper și cardul SD.
   - **UART** – Disponibil pentru debugging sau conectarea altor module. 
