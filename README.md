@@ -23,4 +23,31 @@
 | 15 | Condensatori diversi  | 28       | - | - |
 | 16  | Rezistente diverse          | 24  | -  | - |
 
+# 3. Functionalitate Hardware
+  ## 2.1 Componente
+  - **ESP32-C6-WROOM-1-N8** – Microcontroler principal care gestionează comunicațiile (SPI, I2C, UART) și controlează perifericele.  
+  - **Conector USB-C & Protecție ESD** – Permite alimentarea prin USB-C și protejează circuitul de descărcările electrostatice.  
+  - **Controler de Încărcare MCP73831** – Reglează încărcarea bateriei Li-Po și gestionează curentul de alimentare.  
+  - **Baterie Li-Po** – Asigură alimentarea de rezervă pentru funcționare independentă de sursa USB.  
+  - **Regulator de Tensiune LDO** – Stabilizează alimentarea la 3.3V pentru microcontroler și componente auxiliare.  
+  - **Memorie Flash NOR Externă (64MB)** – Stocare suplimentară pentru date.
+  - **Modul RTC DS3231SN** – Oferă funcționalitate de ceas în timp real, suportând alarme și detectarea pierderii tensiunii..  
+  - **Senzor Ambiental BME688** – Măsoară temperatura, umiditatea, presiunea și calitatea aerului. Comunicare prin I2C, cu suport pentru conectare rapidă (Qwiic/Stemma QT).  
+  - **E-Paper Display Drive Circuit si Header** – Genereaza semnalele necesare pentru controlul ecranului E-Paper.
+  - **Slot SD Card** – Permite stocarea locală a datelor și fișierelor de configurare. 
+  - **Supervizor de Tensiune + Butoane Reset/Boot** – Monitorizează alimentarea și asigură resetarea sistemului atunci când este necesar.
 
+  ## 2.2 Specificatii de comunicare
+  - **I2C** – Utilizat pentru senzorul BME688 și modulul DS3231SN.
+  - **SPI** – Folosit pentru NOR Flash, display-ul E-Paper și cardul SD.
+  - **UART** – Disponibil pentru debugging sau conectarea altor module. 
+  - **Wi-Fi & Bluetooth LE** – Furnizate de ESP32-C6 pentru conectivitate wireless.
+
+# 4. Pini ESP32-C6-WROOM-1-N8 si utilizare
+| Pin ESP32-C6 | Funcție               | Modul de utilizare                                      |
+|-------------|----------------------|--------------------------------------------------------|
+| **3V3**     | Alimentare            | Furnizează tensiune de 3.3V pentru componente.        |
+| **GND**     | Masă                  | Referință pentru circuit.                             |
+| **EN**      | Enable                | Activează microcontrolerul (tensiune ridicată = activ). |
+| **IO0**     | Boot/Programare       | Utilizat pentru intrarea în modul de programare.      |
+  
