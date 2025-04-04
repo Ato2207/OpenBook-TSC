@@ -44,10 +44,35 @@
   - **Wi-Fi & Bluetooth LE** – Furnizate de ESP32-C6 pentru conectivitate wireless.
 
 # 4. Pini ESP32-C6-WROOM-1-N8 si utilizare
-| Pin ESP32-C6 | Funcție               | Modul de utilizare                                      |
+| Pin ESP32-C6| Funcție              | Modul de utilizare                                     |
 |-------------|----------------------|--------------------------------------------------------|
-| **3V3**     | Alimentare            | Furnizează tensiune de 3.3V pentru componente.        |
-| **GND**     | Masă                  | Referință pentru circuit.                             |
-| **EN**      | Enable                | Activează microcontrolerul (tensiune ridicată = activ). |
-| **IO0**     | Boot/Programare       | Utilizat pentru intrarea în modul de programare.      |
+| **3V3**     | Supply               | Furnizează tensiune de 3.3V pentru componente.         |
+| **GND**     | Ground               | Referință pentru circuit.                              |
+| **EN**      | Enable               | Permite pornirea/resetarea modulului (tensiune ridicată = activ). |
+| **IO0**     | Interrupt            | Pentru notificari, conectat la modulul RTC.            |
+| **IO1**     | RTC CLK              | Semnal de ceas pentru modulul RTC.                     |
+| **IO2**     | SPI MISO             | Primire date de la periferice conectate prin SPI.      |
+| **IO3**     | Status               | Semnalizeaza starea de ocupay a display-ului.          |
+| **IO4**     | Slave Select         | Selecteaza cardul SD.                                  |
+| **IO5**     | Data/Command         | Selecteaza intre modul de date si comenzi.             |
+| **IO6**     | SPI CLK              | Semnal de ceas pentru SPI.                             |
+| **IO7**     | SPI MOSI             | Transfer date catre periferice conectate prin SPI.     |
+| **IO8**     | GPIO                 | Pin general GPIO.                                      |
+| **IO9**     | Boot                 | Conectat la un buton pentru intrarea in modul de boot. |
+| **IO10**    | Chip Select          | Activeaza comunicarea cu display-ul.                   |
+| **IO11**    | Chip Select          | Activeaza comunicarea cu memoria flash.                |    
+| **IO12**    | USB_D-               | Pentru USB.                                            |
+| **IO13**    | USB_D+               | Pentru USB.                                            |
+| **IO15**    | Change               | Conectat la un buton.                                  |
+| **IO16**    | TX                   | Pentru UART.                                           |
+| **IO17**    | RX                   | Pentru UART.                                           |
+| **IO18**    | RTC_RST              | Pentru resetarea modulului RTC.                        |
+| **IO19**    | I2C_PW               | Supply pentru I2C.                                     |
+| **IO20**    | EPD_3V3_C            | Alimentare display.                                    |
+| **IO21**    | SDA                  | Linia de date pentru I2C.                              |
+| **IO22**    | SCL                  | Semnalul de ceas pentru I2C.                           |
+| **IO23**    | EPD_RST              | Pentru resetarea display-ului.                         |
+
+  
+  
   
