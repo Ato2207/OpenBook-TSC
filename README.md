@@ -73,6 +73,37 @@
 | **IO22**    | SCL                  | Semnalul de ceas pentru I2C.                           |
 | **IO23**    | EPD_RST              | Pentru resetarea display-ului.                         |
 
+
+# 4. Implementare
+
+## 4.1 Documentatie
+Am inceput prin a citi documentele puse la dispozitie, in ordinea data: MRD, PRD, ERD si documentul de Detailed Design si am extras anumite informatii utile referitoare la modul de functionare al device-ului.
+
+## 4.2 Schematic
+In continuare, prin comparare, am realizat schema electrica precum a fost data in cerinta, respectand toate constrangerile.Ulterior am facut si verificarea ERC si am rezolvat toate erorile semnalate, cu exceptia celor mentionate ca fiind acceptabile.
+
+## 4.3 PCB
+Dupa realizarea schemei electrice, am trecut la partea de board design, pastrand dimensiunile recomandate.Am amplasat componenetele exclusiv pe layer-ul TOP, respectand cu strictete pozitia celor care au contact cu exteriorul.Am realizat doua plane de masa(TOP & BOTTOM) si am aplicat via stitching, in special in jurul modulului ESP32.Am urmat constrangerile de rutare(DRC), inclusiv decuparea PCB-ului sub antena ESP32-ului pentru a nu ruta semnale in acea zona.In final, am realizat silkscreen-ul si am marcat toate test pad-urile cu numele semnalelor.
+
+## 4.4 3D
+Am importat carcasa data si am realizat modelul 3D al bateriei si al ecranului, desenate pe baza dimensiunilor din datasheet-uri.Avand toate piesele, le-am asezat in carcasa corespunzator pentru a nu avea suprapuneri si am aliniat PCB-ul cu mufa USB si slot-ul SD.
+
+# 5. Dificultati intalnite si decizii luate
+
+## Lipsa modele 3D
+Pentru anumite componente nu am reusit sa gasesc chiar modelul 3D perfect, spre exemplu la butoane, card SD, connector-ul QWIIC, asa ca am ales sa merg pe ceva apropiat.
+
+## Erori
+Footprint-ul mufei USB are 2 erori de "Smd-Hole, Board Outline Clearance" cauzate de faptul ca gaurile de sustinere a componentei sunt prea apropiate de pini, conform fisierului de constrangeri.Astfel, am decis sa le aprob deoarece nu depindeau de mine.
+
+## Vias-uri
+Am incercat pe cat posibil sa evit folosirea vias-urilor la traseele de putere si aproape am reusit in totalitate, avand nevoie doar de unul singur la semnalul de VBAT.
+
+## Display
+Am realizat display-ul conform dimensiunilor din datasheet, dar acesta nu se potrivea in carcasa, asa ca am fost nevoit sa il fac independent de acele valori.
+
+
+
   
   
   
